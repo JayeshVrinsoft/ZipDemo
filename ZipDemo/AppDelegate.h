@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SampleProtocol.h"
+#import "WebService.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (strong, nonatomic) WebService *webServiceObj;
+@property (strong, nonatomic) SampleProtocol *sampleObj;
 @property (strong, nonatomic) UIWindow *window;
 
 

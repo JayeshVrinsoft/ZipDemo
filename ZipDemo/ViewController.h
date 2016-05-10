@@ -7,9 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SampleProtocol.h"
 
-@interface ViewController : UIViewController
+@class ViewController;
 
+@interface ViewController : UIViewController <SampleProtocolDelegate>
+{
+    IBOutlet UIButton *btnForZip;
+    SampleProtocol *mSampleProtocol;
+}
+
+typedef void(^myCompletion)(BOOL);
+
+- (IBAction) btnUnzipClicked:(id)sender;
+- (IBAction) btnClearDirectoryClicked:(id)sender;
+- (IBAction) btnListOfFileClicked:(id)sender;
 
 @end
 

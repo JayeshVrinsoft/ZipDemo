@@ -13,10 +13,14 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize sampleObj,webServiceObj;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    webServiceObj = [[WebService alloc] init];
+    sampleObj = [[SampleProtocol alloc] init];
+    
     return YES;
 }
 
